@@ -5,6 +5,6 @@ export const config = {
     url: "https://api.telegram.org/bot" + process.env.TG_API_TOKEN,
   },
   group: {
-    whatIReadToday: "-659752775",
+    whatIReadToday: process.env.TG_GROUP_WHAT_I_READ_TODAY,
   },
 };
