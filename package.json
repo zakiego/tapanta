@@ -8,17 +8,30 @@
   "scripts": {
     "setup": "yarn vercel login && yarn vercel link",
     "start": "yarn vercel dev",
+    "lint": "yarn eslint controller/** event/** routes/** utils/**",
     "dev": "yarn start",
     "deploy": "yarn vercel",
     "deploy:prod": "yarn vercel --prod"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^1.35.3",
+    "@vercel/node": "^2.2.0",
     "dotenv": "^16.0.1",
     "fastify": "^4.1.0",
+    "metadata-scraper": "^0.2.56",
+    "node-fetch-native": "^0.1.4",
+    "query-string": "^7.1.1",
     "vercel": "^25.1.0"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   }
 }
