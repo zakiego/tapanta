@@ -27,7 +27,7 @@ export default class stringParser {
 title         : ${this.getTitle(message.text)}
 updatedAt     : ${dateParser.getActFormat(message)}
 createdAt     : ${dateParser.getActFormat(message)}
-updatedAtUnix : ${dateParser.getActFormat(message)}
+updatedAtUnix : ${dateParser.getUnix(message)} 
 createdAtUnix : ${dateParser.getUnix(message)} 
 ---
 ${this.getContent(message.text)}
