@@ -15,7 +15,7 @@ export default class stringParser {
 
   static getFilepath(text: string) {
     const filename =
-      this.getTitle(text) +
+      this.getTitle(text).replace(/ /g, "-") +
       "-" +
       randomstring.generate(5).toLocaleLowerCase() +
       ".md";
