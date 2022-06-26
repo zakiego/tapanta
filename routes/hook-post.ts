@@ -2,6 +2,7 @@ import { FastifyReply, FastifyRequest } from "fastify";
 import fetch from "node-fetch-native";
 
 import { config } from "../config";
+import GroupAct from "../event/group-act";
 import GroupWhatIReadToday from "../event/group-what-i-read-today";
 import { getChatId } from "../utils/chat-parser";
 import { HookTelegram } from "../utils/type";
@@ -23,6 +24,10 @@ export default async function HookPost(
   switch (getChatId(message)) {
     case group.whatIReadToday:
       await GroupWhatIReadToday(hook);
+      break;
+
+    case group.act:
+      await GroupAct(hook);
       break;
 
     default:

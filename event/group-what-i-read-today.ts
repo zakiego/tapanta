@@ -6,7 +6,7 @@ import {
   getText,
   getUpdatedId,
 } from "../utils/chat-parser";
-import { dateParser } from "../utils/date-parser";
+import dateParser from "../utils/date-parser";
 import revalidateReadingList from "../utils/revalidate-read";
 import { sendMessage } from "../utils/sendMessage";
 import { supabase } from "../utils/supabase";
@@ -23,7 +23,7 @@ const GroupWhatIReadToday = async (hook: HookTelegram) => {
   }
 
   const meta = await getMetaData(text);
-  const { formatDate, dateText } = dateParser(message);
+  const { formatDate, dateText } = dateParser.getWitrFormat(message);
 
   const fullText = `${meta.title} ${meta.description} ${meta.url} ${dateText}`;
 

@@ -6,5 +6,6 @@ export const config = {
   },
   group: {
     whatIReadToday: process.env.TG_GROUP_WHAT_I_READ_TODAY,
+    act: process.env.TG_GROUP_ACT,
   },
 };
