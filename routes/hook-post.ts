@@ -1,5 +1,4 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import fetch from "node-fetch-native";
 
 import { config } from "../config";
 import GroupAct from "../event/group-act";
